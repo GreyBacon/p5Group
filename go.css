@@ -1,0 +1,89 @@
+.pctImg{
+width: 100%;
+height: auto;
+max-height: 70%;
+border-radius: 20px;
+
+}
+.imgDiv{
+  width:30%
+  height:300px;
+  padding:5px;
+}
+body {
+  margin: 20px;
+  background-color: #fffdf3;
+}
+.containMe {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 33% 33% 33%; //better for responsivity
+}
+
+.box {
+  background-color: #F1EBEA;
+  color: #7B241C;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 80%;
+  margin: 3px;
+  border: 3px;
+  display:block;
+  overflow:hidden;
+}
+
+.imageCaption {
+  display:block;
+  text-align:center;
+  font-family:"Comic Sans MS", "Arial";
+  margin:2px;
+  padding:2px;
+}
+
+.subDivider {
+  display:inline-flex;
+  width:95%;
+  height:10%;
+  margin:2%;
+}
+.favButton {
+  position:relative;
+  display:inline-block;
+  background: url("fav.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:70%;
+  height:10 0%;
+  width:12%;
+  border-radius: 25px;
+}
+.unfavButton {
+  position:relative;
+  display:inline-block;
+  background: url("unfav.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:90%;
+  height:100%;
+  width:12%;
+  border-radius: 25px;
+}
+.unfavButton2 {
+  position:relative;;
+  display:inline-flex;
+  background: url("unfav.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:90%;
+  height:25px;
+  width:4%;
+  border-radius: 25px;
+}
+.navPanel {
+  height:6%;
+  border-color: blue;
+}
+
+.progBtn {
+  margin: 10px;
+}

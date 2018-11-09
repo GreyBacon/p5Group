@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Group Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="go.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Container for bootstrap-->
+<div class="container-fluid">
+<!-- Create main grid -->
+<div id="divGrid" class="containMe" style="margin-right: 10%;">
+
+</div>
+</div>
+
+<script>
+var images = ["1.png", "2.png", "3.png", "4.png"];
+var title = ["A", "B", "C", "D"];
+var desc = ["a", "b", "c", "d",];
+
+for(let i=0;i < images.length; i++) {
+  //set up containing boxes
+  var imgDiv = document.createElement("div");
+  imgDiv.setAttribute("class","box");
+
+  //set up image stuff
+  var contentImage = document.createElement("img");
+  contentImage.setAttribute("class","pctImg");
+  url = images[i];
+  contentImage.setAttribute("src", url);
+  contentImage.setAttribute("title", title[i]);
+
+  //Set up link stuff
+  var detailUrl = "kwDetail.html?img=" + url +"&cap=" + title[i] + "&desc=" + desc[i];
+  var detailLink = document.createElement("a");
+  detailLink.setAttribute("href",detailUrl);
+  detailLink.appendChild(contentImage);
+  imgDiv.appendChild(detailLink);
+
+  // caption
+  var capH2 = document.createElement("h2");
+  var capText = document.createTextNode(title[i]);
+  capH2.appendChild(capText);
+  capH2.setAttribute("class","imageCaption");
+  imgDiv.appendChild(capH2);
+
+
+  //Slap each box into the containing grid div
+  divGrid.appendChild(imgDiv);
+
+
+}
+
+</script>
+</body>
+
+</html>
