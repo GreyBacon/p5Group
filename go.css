@@ -1,17 +1,18 @@
 .pctImg{
 width: 100%;
-height: auto;
 max-height: 70%;
 border-radius: 20px;
 display:block;
 }
 
 .detailImg{
-width: 70%;
-height: auto;
-max-height: 70%;
+min-width: 40%;
+height: 40%;
+max-width: 70%;
 border-radius: 20px;
 display:block;
+float:left;
+margin-right: 20px;
 }
 
 .imgDiv{
