@@ -3,12 +3,22 @@ width: 100%;
 height: auto;
 max-height: 70%;
 border-radius: 20px;
-
+display:block;
 }
+
+.detailImg{
+width: 70%;
+height: auto;
+max-height: 70%;
+border-radius: 20px;
+display:block;
+}
+
 .imgDiv{
   width:30%
   height:300px;
   padding:5px;
+  display:block;
 }
 body {
   margin: 20px;
@@ -35,7 +45,6 @@ body {
 .imageCaption {
   display:block;
   text-align:center;
-  font-family:"Comic Sans MS", "Arial";
   margin:2px;
   padding:2px;
 }

@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Acquire an image, via URL Params, then animate its display</title>
   <link rel="stylesheet" href="go.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script> //jq show feature on the image
 //effect applies to the newly created div
   $( function() { //shorthand for document when ready
-    //breakUpURLParameters(); //firtst things first, grab the url params and format the page
+    //breakUpURLParameters(); //first things first, grab the url params and format the page
     $("#u").click(function(){
-        //alert("testing this");
-        var h = "kwGallery.html"; //
+        var h = "p5Gallery.html"; //
         console.log(h);//should be prior url visited, before here
         window.location.href = h;
     });
@@ -28,19 +32,12 @@
     var t = document.getElementById("effectDiv");//grab the div and use the following lines to attach the image to it
     var y = document.createElement("img");
     y.setAttribute("src", x.search.img); // set up and assign img src
-    y.setAttribute("class", "pctImg"); //uses css class, be sure it's in the head area
+    y.setAttribute("class", "detailImg"); //uses css class, be sure it's in the head area
     t.appendChild(y);//populate div with image, via url parameters
 
-    // Add unffav button
-    console.log ("https://s3.us-east-2.amazonaws.com/kw-phase2/" + cookieDecoder() + ".jpg");
-    console.log (" vs " + x.search.img);
+    //Experimental jquery, not working
+    //$("#y").attr("src",x.search.img).addClass("detailImg").appendTo("#t");
 
-    if("https://s3.us-east-2.amazonaws.com/kw-phase2/" + cookieDecoder() + ".jpg"  == x.search.img) {
-      favBtn.setAttribute("class","unfavButton2");
-      favBtn.setAttribute("title","Unfavorite");
-      favBtn.addEventListener("click", function(){document.cookie = "fav=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"; location.reload();});
-    }
-    else {favBtn.parentNode.removeChild(favBtn)};
 
 
     // Add caption and description'
@@ -115,9 +112,8 @@
 </script>
 </head>
 <body>
-  <div id="effectDiv" class="imgDiv">
+  <div id="effectDiv" class="imgDiv" style="display:block">
     <button id="u">back</button>
-    <button id="favBtn"></button>
   </div>
 
 </body>
