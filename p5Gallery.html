@@ -14,17 +14,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Home</button>
-  <button type="button" class="btn btn-secondary">Gallery</button>
-  <button type="button" class="btn btn-secondary">About</button>
-  <button type="button" class="btn btn-secondary">Contact</button>
-</div>
+
 <!-- Container for bootstrap-->
 <div class="container-fluid">
 
   <div class="jumbotron in" id="topJumbotron"> <!-- Title Jumbotron-->
-    <h1 class="display-3">Holiday Sale <span class="badge badge-secondary">NEW</span></h1>
+    <h1 class="display-3">Holiday Sale</h1>
     <p class="lead">Adoptions half price until the new year!</p>
     <hr class="my-4">
     <p class="lead">
@@ -32,7 +27,7 @@
     </p>
   </div>
 
-<h1 style="margin-bottom:100px;">Pet Adoption Center </h1>
+<H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 <!-- Create main grid -->
 <div id="divGrid" class="containMe" style="margin-right: 10%;">
 
@@ -44,7 +39,7 @@ $(function(){       // Runs on page load
   if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
 
     $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
-    document.cookie="hide=yes";}
+    document.cookie="hide=yes"; alert("test");}
     );
   }
   else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
