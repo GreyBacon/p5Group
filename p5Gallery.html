@@ -56,7 +56,7 @@ $(function(){       // Runs on page load
   if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
 
     $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
-    document.cookie="hide=yes";}
+    document.cookie="hide=yes"; alert("deleteme");}
     );
   }
   else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
