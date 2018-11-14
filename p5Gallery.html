@@ -16,6 +16,17 @@
 
 <!-- Container for bootstrap-->
 <div class="container-fluid">
+
+  <div class="jumbotron in" id="topJumbotron"> <!-- Title Jumbotron-->
+    <h1 class="display-3">Holiday Sale</h1>
+    <p class="lead">Adoptions half price until the new year!</p>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" id="jumboBtn" href="#topJumbotron" data-taget="topJumbotron" data-toggle="collapse" aria-expanded="false" aria-controls="topJumbotron" role="button">Hide</a>
+    </p>
+  </div>
+
+<H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 <!-- Create main grid -->
 <div id="divGrid" class="containMe" style="margin-right: 10%;">
 
@@ -23,6 +34,19 @@
 </div>
 
 <script>
+$(function(){       // Runs on page load
+  if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
+
+    $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
+    document.cookie="hide=yes";}
+    );
+  }
+  else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
+
+
+
+});
+
 var images = ["1.png", "2.png", "3.png", "4.png"];
 var title = ["A", "B", "C", "D"];
 var desc = ["a", "b", "c", "d",];
@@ -60,6 +84,14 @@ for(let i=0;i < images.length; i++) {
 
 }
 
+function cookieDecoder() {
+  var startDecode = document.cookie.indexOf("=");
+  var decoded = "";
+  for (var i = startDecode + 1; i < document.cookie.length; i++) {
+    decoded += document.cookie[i];
+  }
+  return decoded;
+}
 </script>
 </body>
 
