@@ -18,12 +18,15 @@
 <!-- Container for bootstrap-->
 <div class="container-fluid">
 
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Home</button>
+  <button type="button" class="btn btn-secondary">Gallery</button>
+  <button type="button" class="btn btn-secondary">About</button>
+  <button type="button" class="btn btn-secondary">Contact</button>
+</div>
+
   <div class="jumbotron in" id="topJumbotron"> <!-- Title Jumbotron-->
-<<<<<<< HEAD
     <h1 class="display-3">Holiday Sale <span class="badge badge-secondary">NEW</span> </h1>
-=======
-    <h1 class="display-3">Holiday Sale</h1>
->>>>>>> 68a091b42f5f7e1a49ef4539bc5e1d033fed1d7d
     <p class="lead">Adoptions half price until the new year!</p>
     <hr class="my-4">
     <p class="lead">
@@ -43,7 +46,7 @@ $(function(){       // Runs on page load
   if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
 
     $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
-    document.cookie="hide=yes"; alert("test");}
+    document.cookie="hide=yes";}
     );
   }
   else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
