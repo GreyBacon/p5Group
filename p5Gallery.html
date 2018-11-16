@@ -18,9 +18,12 @@
 <!-- Container for bootstrap-->
 <div class="container-fluid">
 
-  <div class="btn-group" role="group" aria-label="Basic example">
+  <div class="btn-group dropdown" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary">Home</button>
-  <button type="button" class="btn btn-secondary">Gallery</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</button>
+  <div id="galleryDropdown" class="dropdown-menu">
+
+    </div>
   <button type="button" class="btn btn-secondary">About</button>
   <button type="button" class="btn btn-secondary">Contact</button>
 </div>
@@ -120,9 +123,6 @@ $(function(){       // Runs on page load
     );
   }
   else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
-
-
-
 });
 
 var images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
@@ -159,6 +159,9 @@ for(let i=0;i < images.length; i++) {
   //Slap each box into the containing grid div
   divGrid.appendChild(imgDiv);
 
+
+  // Dynamically populate dropdown
+  $("#galleryDropdown").append('<li><a class="dropdown-item" href="' + detailUrl + '">'+title[i]+'</a></li>');
 
 }
 
