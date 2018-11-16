@@ -39,9 +39,6 @@
 
   <H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 
-<body>
-  <main role="main">
-
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -113,11 +110,17 @@
 </div>
 </div>
 
+<!--Funding progress bar-->
+<hr/ style="border-top: 2px dashed; margin-top: 30px;">
+<h3 id="fundingText" style="margin-top: 30px; margin-left: 30%;">Funded for the month:   </h3>
+<div class="progress" style="margin-top: 20px; margin-left: 20%; margin-right: 20%;">
+  <div id="fundingProgressBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+</div>
+
 <script>
 $(function(){       // Runs on page load
   $("#topJumbotron").collapse('show');
   if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
-
     $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
     document.cookie="hide=yes";}
     );
@@ -129,6 +132,15 @@ var images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 var title = ["Ruffles", "Scrappy", "Wiggles", "Dexter"];
 var desc = ["r", "s", "w", "d",];
 
+//Set funding progress
+var percentFund =  (Math.random()*80)+20
+var funding = {percent: percentFund, amount:percentFund/100*2000};
+$("#fundingProgressBar").css("width",funding.percent + "%");
+$("#fundingText").append("$" + funding.amount.toFixed(2));
+console.log(funding.percent);
+console.log(funding.amount);
+
+// For loop
 for(let i=0;i < images.length; i++) {
   //set up containing boxes
   var imgDiv = document.createElement("div");
@@ -162,8 +174,7 @@ for(let i=0;i < images.length; i++) {
 
   // Dynamically populate dropdown
   $("#galleryDropdown").append('<li><a class="dropdown-item" href="' + detailUrl + '">'+title[i]+'</a></li>');
-
-}
+} // Ending of for forloop
 
 function cookieDecoder() {
   var startDecode = document.cookie.indexOf("=");
@@ -172,6 +183,14 @@ function cookieDecoder() {
     decoded += document.cookie[i];
   }
   return decoded;
+
+  function returnDosh() {
+    var rngPercent = (Math.random()*100)+20;
+    var funding = {
+
+    }
+
+  }
 }
 </script>
 </body>
