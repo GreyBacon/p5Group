@@ -52,9 +52,7 @@
   <div class="btn-group dropdown" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary">Home</button>
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</button>
-  <div id="galleryDropdown" class="dropdown-menu">
-
-    </div>
+  <div id="galleryDropdown" class="dropdown-menu"></div>
   <button type="button" class="btn btn-secondary">About</button>
   <button type="button" class="btn btn-secondary">Contact</button>
 </div>
@@ -70,7 +68,7 @@
 
   <H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 
-    <div id="myCarousel" class="carousel slide">  <!-- had to move out [ data-ride="carousel"] due to errors -->
+    <div id="myCarousel" class="carousel slide">  <!-- had to move out [ data-ride="carousel"] due to f[0] is undefined errors -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -167,7 +165,7 @@ var desc = ["r", "s", "w", "d",];
 var percentFund =  (Math.random()*80)+20
 var funding = {percent: percentFund, amount:percentFund/100*2000};
 $("#fundingProgressBar").css("width",funding.percent + "%");
-$("#fundingText").append("$" + funding.amount.toFixed(2));
+$("#fundingText").append("$" + funding.amount.toFixed(2) + " out of $2000");
 console.log(funding.percent);
 console.log(funding.amount);
 
