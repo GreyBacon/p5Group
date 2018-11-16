@@ -8,21 +8,17 @@
   <!-- Custom styles for this template -->
   <link href="carousel.css" rel="stylesheet">
 
-<!--<<<<<<< HEAD-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--=======
->>>>>>> e15b51a4a1a4d2e0cac24865cd664cc8c57151fe-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 <body>
+  <!-- Container for bootstrap -->
+  <div class="container-fluid">
 
 <!--NavBar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
@@ -51,8 +47,7 @@
 </ul>
 </div>
 </nav>
-<!-- Container for bootstrap
-<div class="container-fluid">
+
 
   <div class="btn-group dropdown" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary">Home</button>
@@ -62,7 +57,7 @@
     </div>
   <button type="button" class="btn btn-secondary">About</button>
   <button type="button" class="btn btn-secondary">Contact</button>
-</div>-->
+</div>
 
   <div class="jumbotron" id="topJumbotron" aria-expanded="true"> <!-- Title Jumbotron-->
     <h1 class="display-3">Holiday Sale <span class="badge badge-secondary">NEW</span> </h1>
@@ -75,7 +70,7 @@
 
   <H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide">  <!-- had to move out [ data-ride="carousel"] due to errors -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -219,15 +214,7 @@ function cookieDecoder() {
     decoded += document.cookie[i];
   }
   return decoded;
-
-  function returnDosh() {
-    var rngPercent = (Math.random()*100)+20;
-    var funding = {
-
-    }
-
   }
-}
 </script>
 </body>
 
