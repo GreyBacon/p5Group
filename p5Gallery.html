@@ -5,17 +5,22 @@
   <title>Group Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="go.css">
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
 
+<!--<<<<<<< HEAD-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--=======
+>>>>>>> e15b51a4a1a4d2e0cac24865cd664cc8c57151fe-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -46,31 +51,30 @@
 </ul>
 </div>
 </nav>
-<!-- Container for bootstrap 
+<!-- Container for bootstrap
 <div class="container-fluid">
 
-  <div class="btn-group" role="group" aria-label="Basic example">
+  <div class="btn-group dropdown" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary">Home</button>
-  <button type="button" class="btn btn-secondary">Gallery</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</button>
+  <div id="galleryDropdown" class="dropdown-menu">
+
+    </div>
   <button type="button" class="btn btn-secondary">About</button>
   <button type="button" class="btn btn-secondary">Contact</button>
 </div>-->
 
-  <div class="jumbotron in" id="topJumbotron"> <!-- Title Jumbotron-->
+  <div class="jumbotron" id="topJumbotron" aria-expanded="true"> <!-- Title Jumbotron-->
     <h1 class="display-3">Holiday Sale <span class="badge badge-secondary">NEW</span> </h1>
     <p class="lead">Adoptions half price until the new year!</p>
     <hr class="my-4">
     <p class="lead">
-      <a class="btn btn-primary btn-lg" id="jumboBtn" href="#topJumbotron" data-taget="topJumbotron" data-toggle="collapse" aria-expanded="false" aria-controls="topJumbotron" role="button">Hide</a>
+      <a class="btn btn-primary btn-lg" id="jumboBtn" href="#topJumbotron" data-taget="topJumbotron" data-toggle="collapse" aria-expanded="true" aria-controls="topJumbotron" role="button">Hide</a>
     </p>
   </div>
-  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
   <H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
 
-  <!-- Custom styles for this template -->
-  <link href="carousel.css" rel="stylesheet">
-</head>
 <body>
   <main role="main">
 
@@ -147,16 +151,14 @@
 
 <script>
 $(function(){       // Runs on page load
+  $("#topJumbotron").collapse('show');
   if(cookieDecoder()!="yes") {    // Loads the button script if the cookie doesn't say to hide it
 
     $("#jumboBtn").click(function() {   //function to add a cookie to remember if the jumbotron should be hidden
-    document.cookie="hide=yes"; alert("deleteme");}
+    document.cookie="hide=yes";}
     );
   }
   else {$("#topJumbotron").hide();} // Hides the jumbotron otherwise
-
-
-
 });
 
 var images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
@@ -193,6 +195,9 @@ for(let i=0;i < images.length; i++) {
   //Slap each box into the containing grid div
   divGrid.appendChild(imgDiv);
 
+
+  // Dynamically populate dropdown
+  $("#galleryDropdown").append('<li><a class="dropdown-item" href="' + detailUrl + '">'+title[i]+'</a></li>');
 
 }
 
