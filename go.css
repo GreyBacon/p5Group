@@ -97,31 +97,11 @@ body {
 .progBtn {
   margin: 10px;
 }
-
-.navbar {
-}
-.navbar-expand-lg {
-}
 .navbar-dark {
     background-color: #F8F8F8;
 }
 .bg-dark {
     color: #777;
-}
-.navbar-brand {
-}
-.navbar-toggler {
-}
-.navbar-toggler-icon {
-}
-.btn-outline-success {
-}
-.btn {
-}
-.collapse {
-}
-.navbar-collapse {
-
 }
 .navbar-nav {
 position: relative;
@@ -131,24 +111,4 @@ float: left;
 }
 .active {
         color: #bfbfbf;
-}
-.mr-auto {
-}
-.nav-item {
-}
-.sr-only {
-}
-.dropdown {
-    float: right;
-position:relative;
-}
-.dropdown-toggle {
-position: relative;
-}
-.dropdown-menu {
-position: absolute;
-float: next;
-
-}
-.dropdown-item {
 }
