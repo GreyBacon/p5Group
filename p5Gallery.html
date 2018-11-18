@@ -72,17 +72,6 @@
 
   </nav>
 
-
-
-<!-- button group -->
-  <div class="btn-group dropdown" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Donate</button>
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adoption</button>
-  <div id="galleryDropdown" class="dropdown-menu"></div>
-  <button type="button" class="btn btn-secondary">About</button>
-  <button type="button" class="btn btn-secondary">Contact</button>
-</div>
-
   <div class="jumbotron" id="topJumbotron" aria-expanded="true"> <!-- Title Jumbotron-->
     <h1 class="display-3">Holiday Sale <span class="badge badge-secondary">NEW</span> </h1>
     <p class="lead">Adoptions half price until the new year!</p>
@@ -92,8 +81,22 @@
     </p>
   </div>
 
-  <H1 style="margin-bottom:100px;">Pet Adoption Center</H1>
-
+  <!-- H1 style="margin-bottom:100px;">Pet Adoption Center</H1>-->
+<div class="card" style="width: 100%;">
+  <img class="card-img-top" src="https://s3-us-west-2.amazonaws.com/cs3110/pic/Wishbone-Adopt-homepg-2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><b>Pet Adoption Center</b></h5>
+    <p class="card-text">Our mission is to alleviate the pain and suffering of homeless pets by providing shelter and veterinary care, and to ultimately secure permanent, loving homes for animals in need.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>Shelter Adoption Events – Usually held every Saturday</b>  <span class="badge badge-secondary">NEW</span></li>
+    <li class="list-group-item"><b>Pet Food Pantry – 2nd and 3rd Saturday of the month</b>  <span class="badge badge-secondary">NEW</span></li>
+  </ul>
+  <div class="card-body">
+    <a href="#divGrid" class="card-link">Pets available</a>
+    <a href="#fundingText" class="card-link">Donate now</a>
+  </div>
+</div>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -165,7 +168,16 @@
 
 </div>
 </div>
-
+	
+<!-- button group -->
+  <div class="btn-group dropdown" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Donate</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adoption</button>
+  <div id="galleryDropdown" class="dropdown-menu"></div>
+  <button type="button" class="btn btn-secondary">About</button>
+  <button type="button" class="btn btn-secondary">Contact</button>
+</div>
+	
 <script>
 $(function(){       // Runs on page load
   $("#topJumbotron").collapse('show');
